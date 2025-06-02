@@ -1,0 +1,35 @@
+research_chapter:
+  description: >
+    Research the provided chapter title and outline to gather rich supporting content and insights.
+    Please ensure the research is relevant to Japanese readers and focuses on high-quality sources.
+
+    Additional information:
+    - Book goal: {goal}
+    - Chapter description: {chapter_description}
+    - Full book outline (Japanese): {book_outline}
+    
+    Output format: Japanese text with points and structure helpful for writing.
+  expected_output: >
+    Structured research notes in Japanese for chapter writing.
+  agent: researcher
+
+write_chapter:
+  description: >
+    Write a comprehensive, well-structured book chapter based on the provided title and description.
+    The chapter should be written in Markdown format, entirely in Japanese, and should target around 3,000 words.
+
+    You must output the result as a JSON object with this format:
+    {
+      "title": "第2章：AIの倫理的課題",
+      "content": "# 第2章：AIの倫理的課題\n\n（本文内容）"
+    }
+
+    Details:
+    - Book topic: {topic}
+    - Chapter title: {chapter_title}
+    - Chapter description: {chapter_description}
+    - Full book outline (Japanese): {book_outline}
+
+  expected_output: >
+    A JSON object containing the chapter `title` and markdown `content`, all in Japanese.
+  agent: writer
