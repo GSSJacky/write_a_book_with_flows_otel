@@ -12,7 +12,7 @@ This project is a customized fork of [crewAI's `write_a_book_with_flows`](https:
 ## 📦 Setup Instructions
 
 ```bash
-cd write_a_book_with_flows
+cd write_a_book_with_flows_otel
 python3.11 -m venv venv3.11
 source venv3.11/bin/activate
 pip install crewai
@@ -21,7 +21,7 @@ crewai install
 
 ### `.env` Setup
 
-Update the `.env` file as follows:
+Create an `.env` file as follows under the main directory:
 
 ```dotenv
 # Optional for web search tools
@@ -63,9 +63,7 @@ If chapters cannot be generated, fallback placeholder text will still be saved t
 
 If you have Instana Agent running locally and listening on port `4318`, all flows will export OpenTelemetry traces for task/agent lifecycle tracking.
 
----
 
-Built with ❤️ and multiple agents using [CrewAI](https://crewai.com).
 
 
 
@@ -83,7 +81,7 @@ Built with ❤️ and multiple agents using [CrewAI](https://crewai.com).
 ## 📦 セットアップ手順
 
 ```bash
-cd write_a_book_with_flows
+cd write_a_book_with_flows_otel
 python3.11 -m venv venv3.11
 source venv3.11/bin/activate
 pip install crewai
@@ -131,8 +129,4 @@ crewai flow kickoff
 ## 📊 Traceloop + Instana 連携（オプション）
 
 ローカルで Instana Agent がポート `4318` で待機していれば、OpenTelemetry を通じてエージェントのタスク実行状況を Instana で確認できます。
-
----
-
-CrewAI によるマルチエージェントAIの力で、未来の書籍執筆を実現。
 
